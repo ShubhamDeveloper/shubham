@@ -1,0 +1,54 @@
+Answer 1:c
+        
+Answer 2:d       
+
+Answer 3:d     
+
+Answer 4:a          
+
+Answer 5:c               
+
+Answer 6:
+SELECT title_id,title
+FROM titles
+WHERE pubdate=NULL;           
+
+Answer 7:c             
+
+Answer 8:
+#avg() returns a value that is not being put to use somewhere and hence becomes an invalid use of group function
+SELECT title, price from books
+where price > (select avg(price) from books);            
+
+Answer 9:
+#a
+SELECT type AS Category, max(price) AS MaxPrice
+FROM titles
+group by type;
+
+#b
+SELECT type AS Category, max(price) AS MaxPrice, title
+FROM titles
+group by type;           
+
+Answer 10:b            
+
+Answer 11:d           
+
+Answer 12:d              
+
+Answer 13:b           
+
+Answer 14:
+CREATE PROCEDURE `auth_search_name` (IN surname VARCHAR(100), OUT resultname VARCHAR(100))
+BEGIN
+SELECT au_lname INTO resultname
+FROM authors a
+WHERE a.au_lname=surname;
+END           
+
+
+Answer 15:a
+            
+
+
